@@ -1,12 +1,10 @@
-package com.yeta.tophistory.web.rest;
+package com.yeta.tophistory.repository;
 
 import com.yeta.tophistory.domain.HistoryPosition;
 import com.yeta.tophistory.domain.HistoryRecord;
-import com.yeta.tophistory.repository.ReactiveHistoryRecordRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import reactor.core.publisher.Flux;
@@ -17,8 +15,7 @@ import java.util.Collections;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@DataMongoTest
-public class HistoryRecordRepositoryTest {
+public class ReactiveHistoryRecordRepositoryTest {
 
     @Autowired
     ReactiveHistoryRecordRepository reactiveHistoryRecordRepository;

@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>History Records</title>
+    <link rel="stylesheet" th:href="@{/style.css}"><link>
+</head>
+<body>
+    <h2>All History Records</h2>
+    <!--/*@thymesVar id="historyRecords" type="com.yeta.tophistory.domain.HistoryRecord[]"*/-->
+    <dl th:each="historyRecord : ${historyRecords}">
+        <dt class="headline">
+            <span th:text="${historyRecord.topName}">Top Name</span>
+            <span th:text="${historyRecord.date}">Date</span>
+        </dt>
+    </dl>
+</body>
+</html>
