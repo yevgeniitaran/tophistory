@@ -1,6 +1,8 @@
 package com.yeta.tophistory.scheduled;
 
+import com.yeta.tophistory.domain.HistoryRecord;
 import com.yeta.tophistory.parser.RottenTomatoesParser;
+import com.yeta.tophistory.repository.ReactiveHistoryRecordRepository;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -8,6 +10,12 @@ import javax.annotation.PostConstruct;
 
 @Component
 public class ParsingTask {
+
+    ReactiveHistoryRecordRepository reactiveHistoryRecordRepository;
+
+    public ParsingTask(ReactiveHistoryRecordRepository reactiveHistoryRecordRepository) {
+        this.reactiveHistoryRecordRepository = reactiveHistoryRecordRepository;
+    }
 
     @PostConstruct
     public void onStartup() {
@@ -21,6 +29,7 @@ public class ParsingTask {
 
     private void parse() {
         RottenTomatoesParser parser = new RottenTomatoesParser();
-        parser.execute();
+        HistoryRecord record = parser.execute();
+        reactiveHistoryRecordRepository.save(record).subscribe();
     }
 }
