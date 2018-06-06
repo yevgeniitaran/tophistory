@@ -36,6 +36,7 @@ public class RottenTomatoesParser implements AbstractParser {
                 historyPosition.setUrl(ROTTEN_TOMATOES_LINK + a.attr("href"));
                 historyPositions.add(historyPosition);
             }
+            historyRecord.setHistoryPositions(historyPositions);
             return historyRecord;
         } catch (IOException e) {
             e.printStackTrace();
