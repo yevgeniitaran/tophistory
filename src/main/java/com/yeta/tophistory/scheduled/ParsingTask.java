@@ -11,16 +11,16 @@ import javax.annotation.PostConstruct;
 @Component
 public class ParsingTask {
 
-    ReactiveHistoryRecordRepository reactiveHistoryRecordRepository;
+    private ReactiveHistoryRecordRepository reactiveHistoryRecordRepository;
 
     public ParsingTask(ReactiveHistoryRecordRepository reactiveHistoryRecordRepository) {
         this.reactiveHistoryRecordRepository = reactiveHistoryRecordRepository;
     }
 
-    @PostConstruct
-    public void onStartup() {
-        parse();
-    }
+//    @PostConstruct
+//    public void onStartup() {
+//        parse();
+//    }
 
     @Scheduled(cron="0 0 0 * * ?")
     public void scheduledParse() {

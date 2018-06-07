@@ -6,8 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.thymeleaf.spring5.context.webflux.ReactiveDataDriverContextVariable;
 
-import java.time.Duration;
-
 @Controller
 public class HistoryRecordViewController {
 
@@ -20,7 +18,7 @@ public class HistoryRecordViewController {
     @RequestMapping("/historyRecordsView")
     public String historyRecordsView(Model model) {
         model.addAttribute("historyRecords", new ReactiveDataDriverContextVariable(
-                reactiveHistoryRecordRepository.findAll().delayElements(Duration.ofSeconds(2)), 1));
+                reactiveHistoryRecordRepository.findAll()));
         return "historyRecords";
     }
 }

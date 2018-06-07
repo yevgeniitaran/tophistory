@@ -11,6 +11,10 @@
             <span th:text="${historyRecord.topName}">Top Name</span>
             <span th:text="${historyRecord.date}">Date</span>
         </dt>
+        <dt th:each="historyPosition : ${historyRecord.historyPositions}">
+            <span th:text="${historyPosition.getPosition()}">Position</span>
+            <a th:href="${historyPosition.getUrl()}" th:text="${historyPosition.getName()}">Name</a>
+        </dt>
     </dl>
 </body>
 </html>
