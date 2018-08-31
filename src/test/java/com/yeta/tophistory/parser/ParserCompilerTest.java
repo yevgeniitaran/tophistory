@@ -13,8 +13,8 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class ParserCompilerTest {
 
-    String className = "RottenTomatoesParserDouble";
-    String rottenTomatoesParserDoubleClass = "package com.yeta.tophistory.parser;\n"+
+    private String className = "com.yeta.tophistory.parser.RottenTomatoesParserDouble";
+    private String rottenTomatoesParserDoubleClass = "package com.yeta.tophistory.parser;\n"+
             "\n"+
             "import com.yeta.tophistory.domain.HistoryPosition;\n"+
             "import com.yeta.tophistory.domain.HistoryRecord;\n"+

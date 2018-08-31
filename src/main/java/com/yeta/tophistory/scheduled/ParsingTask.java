@@ -17,17 +17,12 @@ public class ParsingTask {
         this.reactiveHistoryRecordRepository = reactiveHistoryRecordRepository;
     }
 
-//    @PostConstruct
-//    public void onStartup() {
-//        parse();
-//    }
-
     @Scheduled(cron="0 0 0 * * ?")
     public void scheduledParse() {
         parse();
     }
 
-    private void parse() {
+    public void parse() {
         RottenTomatoesParser parser = new RottenTomatoesParser();
         HistoryRecord record = parser.execute();
         reactiveHistoryRecordRepository.save(record).subscribe();

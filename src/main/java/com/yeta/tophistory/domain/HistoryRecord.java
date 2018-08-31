@@ -10,9 +10,9 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
-@Document
 @Getter @Setter
 @ToString
+@Document(collection = "historyrecord")
 public class HistoryRecord {
 
     @Id

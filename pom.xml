@@ -49,7 +49,6 @@
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
 			<version>1.7.2</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.openhft</groupId>
@@ -62,7 +61,6 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -80,7 +78,6 @@
 			<version>2.0.3</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -91,6 +88,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
