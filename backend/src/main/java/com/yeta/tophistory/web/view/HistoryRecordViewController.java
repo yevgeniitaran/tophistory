@@ -22,9 +22,4 @@ public class HistoryRecordViewController {
         model.addAttribute("historyRecords", new ReactiveDataDriverContextVariable(
                 reactiveHistoryRecordRepository.findAll()));
     }
-
-    @GetMapping("/")
-    public Mono<String> redirectWithUsingRedirectPrefix() {
-        return Mono.just("redirect:/history-records");
-    }
 }
