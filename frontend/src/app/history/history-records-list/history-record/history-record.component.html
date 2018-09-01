@@ -1,0 +1,15 @@
+<h2>{{historyRecord.topName}} on {{historyRecord.date}}</h2>
+<table class="table table-sm table-nonfluid">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Title</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let historyPosition of historyRecord.historyPositions">
+    <td>{{historyPosition.position}}</td>
+    <td><a href="{{historyPosition.url}}">{{historyPosition.name}}</a></td>
+  </tr>
+  </tbody>
+</table>

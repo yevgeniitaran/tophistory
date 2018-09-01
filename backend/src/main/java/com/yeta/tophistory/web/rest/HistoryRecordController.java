@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Comparator;
+
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api")
 public class HistoryRecordController {
 
@@ -21,7 +24,8 @@ public class HistoryRecordController {
 
     @GetMapping("/history-records")
     public Flux<HistoryRecord> findAll() {
-        return reactiveHistoryRecordRepository.findAll();
+        return reactiveHistoryRecordRepository.findAll()
+                .sort(Comparator.comparing(HistoryRecord::getDate).reversed());
     }
 
     @PostMapping("/history-record")
