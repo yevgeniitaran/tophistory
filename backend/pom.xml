@@ -102,10 +102,10 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/classes/public</outputDirectory>
+							<outputDirectory>${basedir}/target/classes/static</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/dist</directory>
+									<directory>../frontend/dist/tophistory</directory>
 								</resource>
 							</resources>
 						</configuration>

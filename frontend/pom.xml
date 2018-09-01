@@ -8,13 +8,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.0.2.RELEASE</version>
-    <relativePath/> <!-- lookup parent from repository -->
-  </parent>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
@@ -22,27 +15,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.0.2</version>
-        <executions>
-          <execution>
-            <id>prepare-package</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/public</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>${project.basedir}/dist</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
@@ -77,19 +49,6 @@
               <arguments>build</arguments>
             </configuration>
           </execution>
-          <!--<execution>-->
-            <!--<id>test</id>-->
-            <!--<goals>-->
-              <!--<goal>yarn</goal>-->
-            <!--</goals>-->
-            <!--<phase>test</phase>-->
-            <!--<configuration>-->
-              <!--<arguments>test</arguments>-->
-              <!--<environmentVariables>-->
-                <!--<CI>true</CI>-->
-              <!--</environmentVariables>-->
-            <!--</configuration>-->
-          <!--</execution>-->
         </executions>
       </plugin>
     </plugins>
