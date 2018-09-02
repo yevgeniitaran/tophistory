@@ -1,0 +1,7 @@
+applications:
+- path: .
+  memory: 1GB
+  instances: 1
+  name: tophistory
+  host: tophistory
+  disk_quota: 1GB
