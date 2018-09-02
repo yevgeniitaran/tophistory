@@ -5,7 +5,7 @@ before_install:
 deploy:
   provider: cloudfoundry
   api: https://api.run.pivotal.io
-  app: tophistory
+  file: backend/target/backend-0.0.1-SNAPSHOT.jar
   username: evg.taran93@gmail.com
   password:
     secure: K0ZU+sJAVDtCmqmkh1a2++6TGVsam5T85P46W6H9rHssD3IE+PNfgg+4W8DlQarpaytZJYBbkpLBdApzZ2ofGc8ab12KYWOHrnElgNK0hweJNfQRxwGzFT6Bykb5+1D1NqBYAo/jhBHk7bQ+gsc3sGwJTnS6bTw3A0SOWQ5lDdS1U/kKijnlh+7oTDZZy34hu4DTzJW4XoF9XINo0sLj1pVVG9YmPrHjzV6yxzw3xDlU7XvGUoQ81JJATvLDzLozfyfU7Fh+H3hQeQoJ31l9Wz+KmzckAu3i+5yxGhwEexqSSwK64k9Kz9W49girKgexrDqW2HIqHE8N1yOPDlVUttZodO1Xs9DLfpHREgZtN7kj9yFUnt9hcu4svRc5YNQsejg6/LrWFfIU7JdLxTySIS1zrCeEfJE4TBRTQ17zXh5qowewYeyURI4F53lzceECYyiI46/xiIwj7pE9WVJtL1ZcCqx4nUdo2ibgYrI6pccY4FRRaS0wnqfJ+AZVfQiFE0ftHjHVQrKQSOqV5kYub0vsXWj+WHXc+OmbSmwhdt0wkb5/nFtZOjGAa7+e1w0ylPL58FRWbUFSegYVolgRTvAyMUxK+9v0TOpZNu9pSP8T8iC6kVfwn0ieTT05vKnCXHhIlFA12jeeQ5Qu1NyFGb23KeoFg10e0tTwfx4Dl5c=
