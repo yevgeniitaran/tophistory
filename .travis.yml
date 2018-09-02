@@ -3,6 +3,7 @@ jdk: oraclejdk8
 before_install:
 - chmod +x mvnw
 deploy:
+  edge: true
   provider: cloudfoundry
   api: https://api.run.pivotal.io
   file: backend/target/backend-0.0.1-SNAPSHOT.jar
