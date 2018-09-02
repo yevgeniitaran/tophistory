@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
 import {HistoryRecord} from '../history-record.model';
+import {HistoryRecordService} from '../history-record.service';
 
 @Component({
   selector: 'app-history-records-list',
@@ -11,13 +11,14 @@ export class HistoryRecordsListComponent implements OnInit {
 
   historyRecords: HistoryRecord[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private historyRecordService: HistoryRecordService) {
   }
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/api/history-records').subscribe((data: HistoryRecord[]) => {
+    this.historyRecordService.getHistoryRecordsObservable().subscribe((data: HistoryRecord[]) => {
       this.historyRecords = data;
     });
   }
-
 }
+
+
