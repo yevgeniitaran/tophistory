@@ -105,7 +105,7 @@
 							<outputDirectory>${basedir}/target/classes/static</outputDirectory>
 							<resources>
 								<resource>
-									<directory>../frontend/dist/tophistory</directory>
+									<directory>../frontend/dist/</directory>
 								</resource>
 							</resources>
 						</configuration>

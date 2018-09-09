@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono;
 import java.util.Comparator;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:8000")
 @RequestMapping("/api")
 public class HistoryRecordController {
 

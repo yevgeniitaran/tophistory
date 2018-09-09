@@ -21,33 +21,33 @@
         <version>1.6</version>
         <executions>
           <execution>
-            <id>install node and yarn</id>
+            <id>install node and npm</id>
             <goals>
-              <goal>install-node-and-yarn</goal>
+              <goal>install-node-and-npm</goal>
             </goals>
             <configuration>
               <nodeVersion>v9.9.0</nodeVersion>
-              <yarnVersion>v1.5.1</yarnVersion>
             </configuration>
           </execution>
           <execution>
-            <id>yarn</id>
+            <id>npm install</id>
             <goals>
-              <goal>yarn</goal>
+              <goal>npm</goal>
             </goals>
-            <phase>prepare-package</phase>
             <configuration>
+              <arguments>install grunt grunt-cli</arguments>
             </configuration>
           </execution>
           <execution>
-            <id>yarn build</id>
+            <id>grunt build</id>
             <goals>
-              <goal>yarn</goal>
+              <goal>grunt</goal>
             </goals>
-            <phase>prepare-package</phase>
-            <configuration>
-              <arguments>build</arguments>
-            </configuration>
+            <!--<configuration>-->
+              <!--&lt;!&ndash; optional: if not specified, it will run Grunt's default-->
+              <!--task (and you can remove this whole <configuration> section.) &ndash;&gt;-->
+              <!--<arguments>concat</arguments>-->
+            <!--</configuration>-->
           </execution>
         </executions>
       </plugin>
