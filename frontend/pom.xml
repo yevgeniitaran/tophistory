@@ -26,7 +26,7 @@
               <goal>install-node-and-npm</goal>
             </goals>
             <configuration>
-              <nodeVersion>v9.9.0</nodeVersion>
+              <nodeVersion>v8.11.1</nodeVersion>
             </configuration>
           </execution>
           <execution>
@@ -34,20 +34,18 @@
             <goals>
               <goal>npm</goal>
             </goals>
-            <configuration>
-              <arguments>install grunt grunt-cli</arguments>
-            </configuration>
+            <!--<configuration>-->
+              <!--<arguments>install gulp-cli gulp</arguments>-->
+            <!--</configuration>-->
           </execution>
           <execution>
-            <id>grunt build</id>
+            <id>gulp build</id>
             <goals>
-              <goal>grunt</goal>
+              <goal>gulp</goal>
             </goals>
-            <!--<configuration>-->
-              <!--&lt;!&ndash; optional: if not specified, it will run Grunt's default-->
-              <!--task (and you can remove this whole <configuration> section.) &ndash;&gt;-->
-              <!--<arguments>concat</arguments>-->
-            <!--</configuration>-->
+            <configuration>
+              <arguments>build-app-dev</arguments>
+            </configuration>
           </execution>
         </executions>
       </plugin>
