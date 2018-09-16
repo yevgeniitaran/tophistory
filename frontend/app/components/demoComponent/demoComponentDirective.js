@@ -1,4 +1,4 @@
-angular.module('healthyGulpAngularApp')
+angular.module('tophistoryApp')
 
 .directive('demoComponent', [function() {
         return {

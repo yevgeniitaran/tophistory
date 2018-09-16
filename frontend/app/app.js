@@ -1,4 +1,4 @@
-angular.module('healthyGulpAngularApp', ['ui.router'])
+angular.module('tophistoryApp', ['ui.router'])
 
 .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
